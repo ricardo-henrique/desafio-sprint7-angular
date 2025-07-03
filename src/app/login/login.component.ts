@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../auth/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -8,4 +7,13 @@ import { AuthenticationService } from '../auth/authentication.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent {}
+export class LoginComponent {
+  nome = '';
+  senha = '';
+
+  constructor(private router: Router) {}
+
+  onSubmit() {
+    this.router.navigate(['dashboard']);
+  }
+}
