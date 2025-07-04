@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
 import { AppRoutingModule } from './app-routing-module';
-import { LoginComponent } from './login/login.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [App],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HomeModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

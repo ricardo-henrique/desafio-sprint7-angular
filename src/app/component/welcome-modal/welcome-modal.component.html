@@ -1,0 +1,32 @@
+<div
+  *ngIf="show"
+  class="fixed inset-0 bg-black/50 flex items-center justify-center z-[50] modal-overlay-animation"
+>
+  <div
+    class="relative bg-white p-8 rounded-lg shadow-xl max-w-sm w-full mx-4 modal-content-animation"
+  >
+    <button
+      class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold transition-colors duration-200"
+      (click)="onClose()"
+    >
+      &times;
+    </button>
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+      Welcome to home, what do you want to do?
+    </h2>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <button
+        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500/50 flex-1"
+        (click)="onDashboardClick()"
+      >
+        Dashboard
+      </button>
+      <button
+        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500/50 flex-1"
+        (click)="onLogoutClick()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>

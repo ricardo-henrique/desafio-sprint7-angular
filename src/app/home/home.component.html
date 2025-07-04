@@ -1,0 +1,26 @@
+<app-welcome-modal
+  [show]="showWelcomeModal"
+  (close)="onModalClosed()"
+  (dashboardClick)="onDashboardClicked()"
+  (logoutClick)="onLogoutClicked()"
+></app-welcome-modal>
+
+<div
+  [class.blur-sm]="showPageContentBlur"
+  [class.pointer-events-none]="showPageContentBlur"
+  class="transition-all duration-300 ease-out min-h-screen bg-gray-100 p-8"
+>
+  <h1 class="text-3xl font-bold text-gray-800 mb-4">Your Home Page</h1>
+  <p class="text-gray-700">
+    This is the main content of your application. When the welcome modal
+    appears, this content will be blurred.
+  </p>
+  <div class="mt-6 p-4 bg-white rounded-lg shadow">
+    <h2 class="text-xl font-semibold mb-2">Recent Activity</h2>
+    <ul class="list-disc list-inside">
+      <li>User logged in at 10:55 AM</li>
+      <li>Updated profile information</li>
+      <li>Viewed Dashboard statistics</li>
+    </ul>
+  </div>
+</div>

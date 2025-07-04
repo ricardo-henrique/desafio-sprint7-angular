@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  nome = '';
-  senha = '';
+  nome = 'admin';
+  senha = '123456';
 
   constructor(private router: Router) {}
 
   onSubmit() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['home']);
   }
 }
