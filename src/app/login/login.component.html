@@ -1,11 +1,17 @@
 <div class="flex">
-  <div class="h-screen flex items-center justify-center">
-    <img src="/img/ranger.png" alt="" />
+  <div class="h-screen flex items-center justify-center md:w-4xl max-sm:hidden">
+    <img src="/img/ranger.png" alt="" class="" />
   </div>
-  <div class="absolute right-0 w-xl h-screen border-l border-l-blue-700">
+  <div
+    class="absolute right-0 w-xl h-screen border-l border-l-blue-700 md:w-md max-sm:static flex-2/4"
+  >
     <div class="h-screen flex flex-col items-center justify-between">
       <div class="my-3">
-        <img src="/img/ford.png" alt="" class="w-3xs" />
+        <img
+          src="/img/ford.png"
+          alt=""
+          class="w-3xs md:w-[12rem] max-sm:w-2xs"
+        />
       </div>
       <div class="w-full px-12">
         <form class="flex flex-col" (ngSubmit)="onSubmit()">
@@ -14,9 +20,9 @@
           >
             Bem vindo
           </h2>
-          <label class="text-sm py-2.5 font-medium text-blue-700"
-            >Usuario</label
-          >
+          <label class="text-sm py-2.5 font-medium text-blue-700">
+            Usuario
+          </label>
           <input
             type="text"
             [(ngModel)]="nome"
