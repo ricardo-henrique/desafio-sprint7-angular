@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -26,7 +26,7 @@ export class HomeComponent {
   onDashboardClicked() {
     console.log('Navigating to Dashboard...');
     this.showPageContentBlur = false;
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['dashboard']);
   }
 
   onLogoutClicked() {

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { WelcomeModalModule } from '../component/welcome-modal/welcome-modal.module';
+import { WelcomeModalModule } from '../components/welcome-modal/welcome-modal.module';
 
 @NgModule({
   declarations: [HomeComponent],

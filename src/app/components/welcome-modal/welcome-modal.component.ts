@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './welcome-modal.component.css',
 })
 export class WelcomeModalComponent {
+  name = '';
+
   @Input() show = false;
   @Output() close = new EventEmitter<void>();
   @Output() dashboardClick = new EventEmitter<void>();
