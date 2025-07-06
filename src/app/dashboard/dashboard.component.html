@@ -1,3 +1,28 @@
-<p>dashboard works!</p>
-
-<router-outlet></router-outlet>
+<div class="flex">
+  <div class="min-h-screen w-xs border-r border-r-blue-700">
+    <div class="flex flex-col gap-1 mx-4 my-2">
+      <a
+        routerLink="consultar-carros"
+        class="bg-blue-700 text-white p-2 rounded-xs flex items-center gap-1.5"
+      >
+        <ng-icon name="heroMagnifyingGlass" />
+        Consultar Carros
+      </a>
+      <a
+        routerLink="teste-drive"
+        class="bg-blue-700 text-white p-2 rounded-xs flex items-center gap-1.5"
+      >
+        <ng-icon name="heroDocumentCheck" />
+        Test Drive
+      </a>
+      <a
+        (click)="toLoginPage()"
+        class="bg-blue-700 text-white p-2 rounded-xs cursor-pointer flex items-center gap-1.5"
+      >
+        <ng-icon name="heroArrowLeftStartOnRectangle" />
+        Sair
+      </a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

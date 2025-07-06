@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TestDriveComponent } from './test-drive.component';
 
+import { TestDriveRoutingModule } from './test-drive-routing.module';
+import { TestDriveComponent } from './test-drive.component';
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import { TestDriveComponent } from './test-drive.component';
     TestDriveComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TestDriveRoutingModule
   ]
 })
 export class TestDriveModule { }

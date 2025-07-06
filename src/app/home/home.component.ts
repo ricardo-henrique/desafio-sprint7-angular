@@ -15,7 +15,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.showWelcomeModal = true;
-    this.showPageContentBlur = true; // Activate blur when modal shows
+    this.showPageContentBlur = true;
   }
 
   onModalClosed() {
@@ -26,7 +26,7 @@ export class HomeComponent {
   onDashboardClicked() {
     console.log('Navigating to Dashboard...');
     this.showPageContentBlur = false;
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['/dashboard']);
   }
 
   onLogoutClicked() {
