@@ -5,6 +5,8 @@ import {
   heroArrowLeftStartOnRectangle,
   heroMagnifyingGlass,
   heroDocumentCheck,
+  heroBars3, // For the hamburger menu icon
+  heroXMark,
 } from '@ng-icons/heroicons/outline';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -21,6 +23,8 @@ import { RouterOutlet } from '@angular/router';
       heroArrowLeftStartOnRectangle,
       heroMagnifyingGlass,
       heroDocumentCheck,
+      heroBars3,
+      heroXMark,
     }),
   ],
   exports: [DashboardComponent],
