@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../services/auth/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,21 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  nome = 'admin';
-  senha = '123456';
+  nome = '';
+  senha = '';
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private authService: AuthenticationService
+  ) {}
 
   onSubmit() {
-    this.router.navigate(['home']);
+    this.authService.login(this.nome, this.senha).subscribe({
+      complete: () => this.router.navigate(['/home']),
+      error: (err) => {
+        alert('nome ou senha incrretos');
+        console.error(err);
+      },
+    });
   }
 }
